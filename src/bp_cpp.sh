@@ -8,7 +8,7 @@ langs=$LANG
  
 info="/*$day $hour\n\t$langs\n\t$logn in $host*/"
 
-code="#include <iostream>\n\nint main(int argc, char 8argv[]){\n\t$info\n\n\treturn 0;\n}"
+code="#include <iostream>\n\nint main(int argc, char const *argv[]) {\n\t$info\n\n\treturn 0;\n}"
 
 if [ $# -eq 1 ]
 then
