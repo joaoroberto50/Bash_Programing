@@ -1,21 +1,10 @@
-#!/bin/sh
- 
-day=$(date +%d-%m-%Y)
-hour=$(date +%H:%M:%S)
-host=$(hostname -s)
-logn=$(logname)
-langs=$LANG
+bp_py(){
+	info_time="# $day $hour"
+	info_usr="$logn in $host"
 
-info_time="# $day $hour"
-info_usr="$logn in $host"
+	code="#!usr/bin/env python\n# *-* coding: utf8 *-*\n\n# Script Author: [$info_usr]\n$info_time\n\n\ndef main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tmain()"
 
-code="#!usr/bin/env python\n# *-* coding: utf8 *-*\n\n# Script Author: [$info_usr]\n$info_time\n\n\ndef main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tmain()"
+	ling_ext="py"
 
-if [ $# -eq 1 ]
-then
-    archive="py$hour.py"
-    echo -e $code > $archive
-    vim $archive
-else
-    echo -e $code
-fi
+	bp_condition $code $ling_ext
+}

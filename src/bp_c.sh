@@ -1,22 +1,9 @@
-#:set fileformat=unix
-#!/bin/sh
+bp_c(){
+	info="/*$day $hour\n\t$langs\n\t$logn in $host*/"
 
-day=$(date +%d-%m-%Y)
-hour=$(date +%H:%M:%S)
-host=$(hostname -s)
-logn=$(logname)
-langs=$LANG
+	code="include <stdio.h>\n#include <stdlib.h>\n\nint main(int argc, char *argv[]){\n\t$info \n\n\treturn 0;\n}"
 
-info="/*$day $hour\n\t$langs\n\t$logn in $host*/"
+	ling_ext="c"
 
-code="include <stdio.h>\n#include <stdlib.h>\n\nint main(int argc, char *argv[]){\n\t$info \n\n\treturn 0;\n}"
-
-if [ $# -eq 1 ]
-then
-    archive="c$hour.c"
-    echo -e $code > $archive
-    vim $archive
-else
-    echo -e $code
-fi
-
+	bp_condition $code $ling_ext
+}
