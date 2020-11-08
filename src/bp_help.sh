@@ -4,7 +4,7 @@ nome="Bash_Programing"
 version="1.0.0"
 year="2020"
 author="Joao Roberto"
-url=""
+url="https://github.com/joaoroberto50/Bash_Programing"
 description="This is a simple set of scripts that returns a simple code structure for some languages, aiming to streamline code writing in text editors and simpler code editors, mainly for command line editors."
 
 
