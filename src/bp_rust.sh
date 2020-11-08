@@ -5,17 +5,16 @@ hour=$(date +%H:%M:%S)
 host=$(hostname -s)
 logn=$(logname)
 langs=$LANG
- 
+
 info="/*$day $hour\n\t$langs\n\t$logn in $host*/"
 
-code="#include <iostream>\n\nint main(int argc, char const *argv[]) {\n\t$info\n\n\treturn 0;\n}"
+code="fn main() {\n    $info\n  \n}\n"
 
 if [ $# -eq 1 ]
 then
-    archive="cpp$hour.cpp"
+    archive="rs$hour.rs"
     echo -e $code > $archive
     vim $archive
 else
     echo -e $code
 fi
-
