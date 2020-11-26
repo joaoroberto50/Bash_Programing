@@ -5,5 +5,5 @@ bp_c(){
 
 	ling_ext="c"
 
-	bp_condition $code $ling_ext
+	bp_condition $1 $code $ling_ext
 }

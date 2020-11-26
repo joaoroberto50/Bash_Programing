@@ -1,9 +1,9 @@
 bp_condition(){
-    if [ $# -eq 1 ]
+    if [ $# -eq 3 ]
     then
 		  archive="$ling_ext$only_hour.$ling_ext"
 		  echo -e $code > $archive
-		  vim $archive
+		  $1 $archive
 	  else
 		  echo -e $code
 	  fi
