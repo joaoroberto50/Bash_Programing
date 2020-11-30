@@ -1,7 +1,7 @@
 #!/bin/sh
 
 nome="Bash_Programing"
-version="1.1.0"
+version="1.2.1"
 year="2020"
 author="Joao Roberto"
 url="https://github.com/joaoroberto50/Bash_Programing"
