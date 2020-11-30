@@ -35,12 +35,17 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 ```
+You can also pass the name of a publisher as an argument to start this code. Example:
+```
+bp_cpp vim
+```
 For more details use ```bp_help```.
 
 ## How to unistall
-Just use use the comand make unistall inside the folder that you cloned the project
+Just use use the comand make unistall and make clean inside the folder that you cloned the project
 ```
 make unistall
+make clean
 ```
 
 ## Bugs and suggestions
